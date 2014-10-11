@@ -1,6 +1,16 @@
 <aside>
 <?php if (is_404()) { ?>
 <?php } else { ?>
+<img src="http://toshi0607.sakura.ne.jp/sukesan/img/logo.png" align="left" width="75px" style="margin-right: 10px" />
+<h1>
+助三サービス
+</h1>
+
+
+  <div id="mybox">
+    <?php if ( function_exists('dynamic_sidebar') && dynamic_sidebar(1) ) : else : //サイドウイジェット読み込み ?>
+    <?php endif; ?>
+  </div>
   <div class="ad">
     <?php if ( function_exists('dynamic_sidebar') && dynamic_sidebar(4) ) : else : //アドセンス ?>
     <?php endif; ?>
@@ -14,10 +24,6 @@
   <h4 class="menu_underh2"> NEW POST</h4>
   <?php get_template_part('newpost');?>
   <!-- /最近のエントリ -->
-  <div id="mybox">
-    <?php if ( function_exists('dynamic_sidebar') && dynamic_sidebar(1) ) : else : //サイドウイジェット読み込み ?>
-    <?php endif; ?>
-  </div>
   <!-- スマホだけのアドセンス -->
 <?php if (is_404()) { ?>
 <?php } else { ?>
